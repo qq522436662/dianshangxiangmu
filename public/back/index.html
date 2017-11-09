@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘后台管理首页</title>
+    <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./lib/bootstrap-validator/css/bootstrapValidator.min.css" rel="stylesheet" type="text/css">
+    <link href="./lib/nprogress/nprogress.css" rel="stylesheet" type="text/css">
+    <link href="./css/common.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="">
+    <!-- 左侧侧边栏 -->
+    <div class="sidebar" id="sidebar">
+        <!-- logo -->
+        <div class="logo tac">
+            <a href="javascript:;">
+                <h1>乐淘</h1>
+            </a>
+        </div>
+        <!-- 头像 -->
+        <div class="user">
+            <img src="./images/default.png" alt="">
+            <span>管理员</span>
+        </div>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            <i class="glyphicon glyphicon-user"></i>用户管理
+                        </a>
+                    </h4>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            <i class="glyphicon glyphicon-list"></i>分类管理
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <a href="javascript:;">一级分类</a>
+                        <a href="javascript:;">二级分类</a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            <i class="glyphicon glyphicon-tags"></i>商品管理
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主体区域 -->
+    <main class="add-content">
+        <div class="ad_nav">
+            <a href="javascript:;" class="pull-left btn_menu">
+                <i class="glyphicon glyphicon-align-justify"></i>
+            </a>
+            <a href="javascript:;" class="pull-right btn_outlogin">
+                <i class="glyphicon glyphicon-log-out"  data-toggle="modal" data-target="#myModal"></i>
+            </a>
+        </div>
+        <div class="container-fluid">
+            <ol class="breadcrumb">
+                <li><a href="#">管理系统</a></li>
+                <li class="active">首页</li>
+            </ol>
+        </div>
+    </main>
+    <!-- 按钮触发模态框 -->
+    <!--role aria sr-only: 屏幕阅读器使用-->
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+                </div>
+                <div class="modal-body text-danger"><i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary btn_ounloggin_true">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <script src="./lib/nprogress/nprogress.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

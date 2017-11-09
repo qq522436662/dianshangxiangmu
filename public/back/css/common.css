@@ -1,0 +1,131 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a:hover,
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+.bg-1 {
+    background-color: #222d32;
+}
+
+.mt-150 {
+    margin-top: 150px;
+}
+
+.tac {
+    text-align: center;
+}
+
+.out {
+    margin-left: -180px;
+}
+
+
+/* 首页 */
+
+.sidebar {
+    height: 100%;
+    width: 180px;
+    background-color: #222d32;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.4s;
+}
+
+.sidebar .logo a {
+    display: block;
+    background-color: #367fa9;
+    color: #FFF;
+    width: 100%;
+    height: 50px;
+}
+
+.sidebar .logo a h1 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.sidebar .user {
+    width: 100%;
+    height: 110px;
+    line-height: 110px;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.sidebar .user img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+/* #accordion {
+    padding: 0 20px;
+} */
+
+.panel.panel-default {
+    background-color: transparent;
+    border: none;
+}
+
+.panel-default>.panel-heading {
+    color: #aaa;
+    background-color: transparent;
+    border: none;
+    border: 1px solid transparent;
+    border-left: 2px solid rgb(60, 141, 188)
+}
+
+#accordion .panel.panel-default .panel-body {
+    border: none;
+    color: #aaa;
+}
+
+#accordion .panel.panel-default .panel-body a {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    color: #aaa;
+}
+
+
+/* 主体区域 */
+.add-content {
+    height: 100%;
+    padding-left: 180px;
+    transition: all 0.4s;
+}
+
+.add-content .ad_nav {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #3c8dbc;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    transition: all 0.4s;
+}
+
+.add-content .ad_nav a {
+    display: block;
+    color: #fff;
+}
