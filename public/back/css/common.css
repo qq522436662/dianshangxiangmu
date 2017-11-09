@@ -129,3 +129,8 @@ a:active {
     display: block;
     color: #fff;
 }
+.lt-content .pic_left,
+.lt-content .pic_right{
+    width: 50%;
+    height: 400px;
+}
