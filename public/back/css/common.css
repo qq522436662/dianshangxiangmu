@@ -10,11 +10,22 @@ body {
     list-style: none;
 }
 
+i,{
+    font-style: normal;
+}
+
 a:hover,
 a:link,
 a:visited,
 a:active {
     text-decoration: none;
+}
+
+table,
+thead,
+tr,
+th {
+    text-align: center;
 }
 
 .bg-1 {
@@ -25,6 +36,9 @@ a:active {
     margin-top: 150px;
 }
 
+.mt-30{
+    margin-top: 20px;
+}
 .tac {
     text-align: center;
 }
@@ -90,9 +104,13 @@ a:active {
     background-color: transparent;
     border: none;
     border: 1px solid transparent;
-    border-left: 2px solid rgb(60, 141, 188)
-}
 
+}
+.panel-default>.nowpage{
+    border-left: 2px solid rgb(60, 141, 188);
+    background-color: #222;
+    color: #fff;
+}
 #accordion .panel.panel-default .panel-body {
     border: none;
     color: #aaa;
@@ -109,6 +127,7 @@ a:active {
 
 
 /* 主体区域 */
+
 .add-content {
     height: 100%;
     padding-left: 180px;
@@ -129,8 +148,13 @@ a:active {
     display: block;
     color: #fff;
 }
+
 .lt-content .pic_left,
-.lt-content .pic_right{
+.lt-content .pic_right {
     width: 50%;
     height: 400px;
+}
+
+.container-fluid .table tr td{
+    vertical-align: middle;
 }

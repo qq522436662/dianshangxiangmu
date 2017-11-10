@@ -37,16 +37,16 @@
                 </div>
             </div>
             <div class="panel panel-default">
-                <div class="panel-heading">
+                <div class="panel-heading nowpage">
                     <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                             <i class="glyphicon glyphicon-list"></i>分类管理
                         </a>
                     </h4>
                 </div>
-                <div id="collapseTwo" class="panel-collapse collapse">
+                <div id="collapseTwo" class="panel-collapse collapse in">
                     <div class="panel-body">
-                        <a href="./categoryFirst.html">一级分类</a>
+                        <a href="./categoryFirst.html" style="color:#fff">一级分类</a>
                         <a href="./categoryLast.html">二级分类</a>
                     </div>
                 </div>
@@ -72,48 +72,74 @@
                 <i class="glyphicon glyphicon-log-out"  data-toggle="modal" data-target="#myModal"></i>
             </a>
         </div>
-
         <div class="container-fluid">
             <ol class="breadcrumb">
                 <li><a href="#">管理系统</a></li>
-                <li class="active">首页</li>
+                <li><a href="#">分类管理</a></li>
+                <li class="active">一级分类</li>
             </ol>
-            <div class="lt-content">
-                <div class="pic_left pull-left">
-                    11
-                </div>
-                <div class="pic_right pull-right">
-                    22
+            <button type="button" class="btn btn-default btn_add" data-toggle="modal" data-target="#myModal">添加分类</button>
+            <!-- 表单 -->
+            <table class="table table-bordered mt-30">
+                <thead>
+                    <tr>
+                        <th width="30%">序号</th>
+                        <th width="70%">分类名称</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>户外</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 分页控件 -->
+            <div class="text-right">
+                <ul id="paginator"></ul>
+            </div>
+            <!-- 模态框（Modal） -->
+            <div class="modal fade" id="myModal" tabindex="-1">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">添加分类</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form" role="form" id="form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" name="categoryName" placeholder="请输入一级分类名称">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" form="form" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="submit" form="form" class="btn btn-primary set-First">确定</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-    <!-- 按钮触发模态框 -->
-    <!--role aria sr-only: 屏幕阅读器使用-->
-    <!-- 模态框（Modal） -->
-    <div class="modal fade" id="myModal" tabindex="-1">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
-                </div>
-                <div class="modal-body text-danger"><i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗?</div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary btn_ounloggin_true">确定</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+    <!-- 模板 -->
+    <script type="text/html" id="tpl">
+        {{each rows v i}}
+        <tr>
+            <td>{{(page-1)*size+i+1}}</td>
+            <td>{{v.categoryName}}</td>
+        </tr>
+        {{/each}}
+    </script>
+
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
-    <script src="./lib/echarts/echarts.min.js"></script>
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/categoryFirst.js"></script>
 </body>
 
 </html>
