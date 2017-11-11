@@ -10,7 +10,7 @@ body {
     list-style: none;
 }
 
-i,{
+i,s{
     font-style: normal;
 }
 
@@ -157,4 +157,27 @@ th {
 
 .container-fluid .table tr td{
     vertical-align: middle;
+}
+
+
+/* 图片上传遮挡 */
+.btn_file_box{
+    position: relative;
+    margin-bottom: 20px;
+}
+.btn_file_box button:hover{
+    background-color: #999;
+}
+.btn_file_box input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 34px;
+    width: 82px;
+    opacity: 0;
+}
+
+.form-group img{
+    width: 100px;
+    height: 100px;
 }

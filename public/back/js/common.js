@@ -20,7 +20,9 @@ $(function (){
             }
         })
     }
-
+    
+    class NameClass {
+    }
     // 退出用户
     $(".btn_ounloggin_true").on("click",function (){
         $.ajax({
