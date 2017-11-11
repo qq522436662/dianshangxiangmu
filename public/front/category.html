@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘-首页</title>
+    <link rel="icon" href="./favicon.ico">
+    <link href="./lib/fa/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="./lib/mui/css/mui.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/commons.css" rel="stylesheet" type="text/css">
+    <link href="./css/category.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- 主盒子 -->
+    <div class="lt_container">
+        <!-- 顶部栏 -->
+        <div class="lt_topBar">
+            <a href="index.html" class="icon_left"><i class="mui-icon mui-icon-arrowleft"></i></a>
+            <h4>乐淘云购</h4>
+            <a href="index.html" class="icon_right"><i class="fa fa-search"></i></a>
+        </div>
+        <!-- 主体内容 -->
+        <div class="lt_content">
+            <!-- 左侧滑动盒子 -->
+            <div class="lt_cateLeft">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <ul>
+                            <li><a href="javascript:;">1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧滑动盒子 -->
+            <div class="lt_cateRight">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="./images/none.png" alt="">
+                                    <p>耐克</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                        <img src="./images/none.png" alt="">
+                                        <p>耐克</p>
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                            <img src="./images/none.png" alt="">
+                                            <p>耐克</p>
+                                        </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                                <img src="./images/none.png" alt="">
+                                                <p>耐克</p>
+                                            </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                                    <img src="./images/none.png" alt="">
+                                                    <p>耐克</p>
+                                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部栏 -->
+        <div class="lt_footer">
+            <ul>
+                <li><a href="index.html
+                    ">
+                    <i class="fa fa-home"></i>
+                    <p>首页</p>
+                </a></li>
+                <li class='now'>
+                    <a href="#">
+                        <i class="fa fa-bars"></i>
+                        <p>分类</p>
+                    </a>
+                </li>
+                <li><a href="#">
+                    <i class="fa fa-shopping-cart"></i>
+                    <p>购物车</p>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa fa-user"></i>
+                    <p>用户</p>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 左侧模板 -->
+    <script type="text/html" id="tpl">
+        {{each rows v i}}
+        <li><a href="javascript:;">{{v.categoryName}}</a></li>
+        {{/each}}
+    </script>
+    <!-- 右侧模板 -->
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+
+    <script src="./js/commons.js"></script>
+    <script src="./js/category.js"></script>
+</body>
+
+</html>
