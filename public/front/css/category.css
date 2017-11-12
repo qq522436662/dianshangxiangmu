@@ -1,4 +1,4 @@
-.lt_cateLeft{
+.lt_cateLeft {
     width: 90px;
     height: 100%;
     float: left;
@@ -7,7 +7,8 @@
     background-color: #fff;
     padding: 0;
 }
-.lt_cateLeft li{
+
+.lt_cateLeft li {
     text-align: center;
     width: 100%;
     /* width: 88px; */
@@ -15,36 +16,48 @@
     line-height: 49px;
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    background-color: #f3f4f5;
 }
-
-
-.lt_cateRight{
+.lt_cateLeft .now{
+    background-color: #fff;
+    border-right: none;
+}
+.lt_cateLeft li a{
+    display: block;
+}
+.lt_cateRight {
     height: 100%;
     overflow: hidden;
     padding-left: 90px;
     position: relative;
+    text-align: center;
+    background-color: #edf2eb;
     /* background-color: pink; */
 }
-.lt_cateRight ul li{
+
+.lt_cateRight ul li {
     float: left;
     width: 30%;
     margin-right: 5%;
     height: 100px;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
     padding-top: 20px;
     margin-top: 10px;
     text-align: center;
 }
-.lt_cateRight ul li a{
+
+.lt_cateRight ul li a {
     display: block;
     width: 100%;
     height: 100%;
 }
-.lt_cateRight ul li img{
+
+.lt_cateRight ul li img {
     display: inline-block;
     width: 50px;
     height: 50px;
 }
-.lt_cateRight ul li:nth-child(3n){
+
+.lt_cateRight ul li:nth-child(3n) {
     margin-right: 0;
 }

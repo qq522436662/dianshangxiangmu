@@ -47,30 +47,6 @@
                                     <p>耐克</p>
                                 </a>
                             </li>
-                            <li>
-                                <a href="javascript:;">
-                                        <img src="./images/none.png" alt="">
-                                        <p>耐克</p>
-                                    </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                            <img src="./images/none.png" alt="">
-                                            <p>耐克</p>
-                                        </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                                <img src="./images/none.png" alt="">
-                                                <p>耐克</p>
-                                            </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                                    <img src="./images/none.png" alt="">
-                                                    <p>耐克</p>
-                                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -104,14 +80,25 @@
     <!-- 左侧模板 -->
     <script type="text/html" id="tpl">
         {{each rows v i}}
-        <li><a href="javascript:;">{{v.categoryName}}</a></li>
+        <li><a href="javascript:;" data-id='{{v.id}}'>{{v.categoryName}}</a></li>
         {{/each}}
     </script>
+
     <!-- 右侧模板 -->
+    <script type="text/html" id="tpl1">
+        {{each rows v i}}
+        <li>
+            <a href="javascript:;">
+               <img src="{{v.brandLogo}}" alt="">
+               <p>{{v.brandName}}</p>
+            </a>
+        </li>
+        {{/each}} {{if rows.length==0}}
+        <span>没有找到商品</span> {{/if}}
+    </script>
     <script src="./lib/mui/js/mui.min.js"></script>
     <script src="./lib/zepto/zepto.min.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
-
     <script src="./js/commons.js"></script>
     <script src="./js/category.js"></script>
 </body>
