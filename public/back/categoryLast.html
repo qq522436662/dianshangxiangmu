@@ -117,33 +117,39 @@
                                     <div class="dropdown">
                                         <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">请选择一级分类
                                             <span class="caret"></span>
-                                        </button>
+                                            
+                                        </button><input type="hidden" id='categoryId'
+                                            name='categoryId'>
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                             <li>
-                                                <a tabindex="-1" href="#">Java</a>
+                                                <a tabindex="-1" href="#">下拉1</a>
                                             </li>
                                             <li>
-                                                <a tabindex="-1" href="#">数据挖掘</a>
+                                                <a tabindex="-1" href="#">下拉2</a>
                                             </li>
                                         </ul>
                                     </div>
+
                                 </div>
                                 <!-- 输入框 -->
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="name" placeholder="请输入二级分类名称">
+                                    <input type="text" name='brandName' class="form-control" id="brandName" placeholder="请输入二级分类名称">
                                 </div>
-                                <div class="btn_file_box">
+                                <!-- 上传图片 -->
+                                <div class="btn_file_box form-group">
                                     <button type="button" class="btn btn-default">上传图片</button>
-                                    <input type="file" name="" value="">
+                                    <input type="file" id="fileupload" name="pic1" data-url="/category/addSecondCategoryPic" class="btn btn-default">
                                 </div>
-                                <div class="form-group">
-                                    <img src="./images/none.png" alt="">
+                                <!-- 图片预览 -->
+                                <div class="form-group img_box">
+                                    <img src="./images/none.png" alt="" width="100" height='100'>
+                                    <input type="hidden" name="brandLogo" id='brandLogo' value="">
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" form="form" class="btn btn-default" data-dismiss="modal">取消</button>
-                            <button type="submit" form="form" class="btn btn-primary set-First">确定</button>
+                            <button type="submit" form="form" class="btn btn-primary set-last">确定</button>
                         </div>
                     </div>
                 </div>
@@ -154,12 +160,24 @@
     <script type="text/html" id="tpl">
         {{each rows v i}}
         <li>
-            <a tabindex="-1" href="#">{{v.categoryName}}</a>
+            <a tabindex="-1" href="#" data-id='{{v.id}}'>{{v.categoryName}}</a>
         </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="tpl2">
+        {{each rows v i}}
+        <tr>
+            <td>{{(page-1)*size+i+1}}</td>
+            <td>{{v.categoryName}}</td>
+            <td>{{v.brandName}}</td>
+            <td><img src="{{v.brandLogo}}" alt=""></td>
+        </tr>
         {{/each}}
     </script>
 
     <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
