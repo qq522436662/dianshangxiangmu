@@ -21,28 +21,5 @@
 .lt_nav li a img{
     width: 100%;
 }
-.lt_product{
-    width: 100%;
-    padding: 10px;
-}
-.lt_product li{
-    float: left;
-    width: 48%;
-    border: 1px solid #ccc;
-    /* background-color: khaki; */
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-.lt_product li:nth-child(odd){
-    margin-right: 4%;
-}
-.lt_product li img{
-    width: 100%;
-}
-.lt_product li a span{
-    color: royalblue;
-}
-.lt_product li a p span{
-    color: red;
-}
+
+
