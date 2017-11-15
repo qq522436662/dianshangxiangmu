@@ -39,5 +39,10 @@ var tools = {
   getParam: function (key) {
     return this.getParamObj()[key];
   },
+  checkLogin:function (data) {
+    if(data.error == 400){
+      location.href = "login.html";
+    }
+  }
   //作业：var obj = {name:"zs", age:18, desc:"呵呵"}  转换成字符串  name=zs&age=18&desc=呵呵
 }

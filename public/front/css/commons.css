@@ -94,7 +94,7 @@ s{
     background-color: #006699;
     height: 65px;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .lt_footer .now a,
